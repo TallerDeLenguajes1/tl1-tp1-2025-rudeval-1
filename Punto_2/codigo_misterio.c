@@ -1,33 +1,35 @@
 #include <stdio.h>
 //renombrar funciones y variables de forma adecuada
-void f_alpha(int *p) {
-    int temp = *p; //*p = 452
-    int rev = 0; //rev = 1 pero le asigna 0 (inicializar)
-    while (temp > 0) {
-        rev = (rev * 10) + (temp % 10); //0 + 2, 20+5(45%10), 250+4(4%10)
-        temp = temp / 10; //45 (quita el ultimo digito), 4, 0
+
+void invertir_numero(int *p) {
+    int aux = *p; //*p = 452
+    int numeroInvertido = 0; //rev = 1 pero le asigna 0 (inicializar)
+    while (aux > 0) {
+        numeroInvertido = (numeroInvertido * 10) + (aux % 10); //0 + 2, 20+5(45%10), 250+4(4%10)
+        aux = aux / 10; //45 (quita el ultimo digito), 4, 0
     }
-    *p = rev; //contenido de p = rev = 254
+    *p = numeroInvertido; //contenido de p = rev = 254
 }
 
-void f_beta(int *p) {
-    *p = *p / 2;
-}
+void dividir_en_2(int *p) {
+    *p = *p / 2; //divide en 2 a la vble que apunta p (rev=254)
+} 
+//*p = rev/2 = 127
 
-void f_gamma(int *p) {
-    int temp = *p;
-    int suma = 0;
+void sumar_digitos(int *p) { //temp=0
+    int temp = *p; //temp = 127
+    int suma = 0; //inicializa suma
     while (temp > 0) {
-        suma = suma + (temp % 10);
-        temp = temp / 10;
+        suma = suma + (temp % 10); // suma=0+7 , suma=7+2 , suma= 9+1
+        temp = temp / 10; //temp=12 , temp=1 , temp=0
     }
-    *p = *p + suma;
+    *p = *p + suma; //*p = 127 + 10 = 137
 }
 
 void procesar_enigma(int *valor_referencia) {
-    f_alpha(valor_referencia);
-    f_beta(valor_referencia);
-    f_gamma(valor_referencia);
+    invertir_numero(valor_referencia); //valor_referencia = &dato_secreto
+    dividir_en_2(valor_referencia);
+    sumar_digitos(valor_referencia);
 }
 
 int main() {

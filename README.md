@@ -17,9 +17,9 @@ El archivo se debe crear desde el inicio del proyecto, antes de hacer el primer 
 ## **Ejercicio 3** 
 **f.**  
 ### _Codigo misterio:_ 
-#### *f_alpha:* 
-- temp = 452
-- rev = 0, inicializa la variable
+#### *f_alpha/invertir_numero:* 
+- temp/aux = 452
+- rev/numeroInvertido = 0, inicializa la variable
 - mientras temp es mayor a 0:
     * it 1: 
         * rev = 0*10 + 2 = 2 (multiplica por 10 rev y le suma el último dígito de temp)
@@ -31,13 +31,24 @@ El archivo se debe crear desde el inicio del proyecto, antes de hacer el primer 
         * rev = 25*10 + 4 = 254
         * temp = 0
     * se corta el bucle
-- asigna 254 a la variable a la que apunta el puntero.
+- asigna 254 al valor original mediante el puntero. 
 
-*Conclusión:_*
+_Conclusión:_
 
-f_alpha invierte el número recibido. temp es la variable auxiliar para recorrer el numero original. rev va construyendo el numero invertido dígito a dígito.
+*f_alpha/invertir_numero* invierte el número recibido. *temp* es la variable auxiliar para recorrer el numero original. *rev* va construyendo el numero invertido dígito a dígito. 
 
-#### *f_beta:*
+#### *f_beta:/dividir_en_2*
+Divide por 2 el valor al que apunta el puntero.
+(*p= rev/2=127)
+
+#### *f_gamma:/sumar_digitos*
+La función suma cada dígito del numero ingresado, luego la suma al valor original. 
+1. *temp* guarda el numero para no perderlo y asi recorrerlo
+2. *suma* va separando cada ultimo digito y sumandolo con los anteriores. 
+3. Se suma el resultado obtenido al valor original apuntado por p. (=137).
+
+#### *procesar_enigma/procesar_numero*
+Recibe como parámetro un puntero a entero que apunta a la variable original (452), y aplica secuencialmente las funciones f_alpha, f_beta y f_gamma.
 
 
 ### _Codigo sin funcionar:_ 
@@ -46,3 +57,4 @@ Errores encontrados:
 - En la línea 12, la implementación del scanf es incorrecta ya que falta el operador '&', que permite pasar la dirección de memoria de la variable para que la función pueda modificar su valor. 
 - La función **duplicar_numero** no produce ningún cambio en la variable original, ya que trabaja con una corpia del valor. Para modificarla correctamente, es necesario trabajar con punteros. Para ello, pasamos como parámetro un puntero a entero y modificamos su contenido con el operador de indirección '*'.
 - En la invocación de la función (línea 20), debemos pasar como argumento la dirección de memoria de la variable ya que estamos trabajando con punteros. 
+
