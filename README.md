@@ -17,10 +17,10 @@ El archivo se debe crear desde el inicio del proyecto, antes de hacer el primer 
 ## **Ejercicio 3** 
 **f.**  
 ### _Codigo misterio:_ 
-*f_alpha:* 
+#### *f_alpha:* 
 - temp = 452
 - rev = 0, inicializa la variable
-- mientras temp es mayor a 0
+- mientras temp es mayor a 0:
     * it 1: 
         * rev = 0*10 + 2 = 2 (multiplica por 10 rev y le suma el último dígito de temp)
         * temp = 45 (quita el último dígito de temp)
@@ -32,15 +32,17 @@ El archivo se debe crear desde el inicio del proyecto, antes de hacer el primer 
         * temp = 0
     * se corta el bucle
 - asigna 254 a la variable a la que apunta el puntero.
-_Conclusión:_ 
+
+*Conclusión:_*
+
 f_alpha invierte el número recibido. temp es la variable auxiliar para recorrer el numero original. rev va construyendo el numero invertido dígito a dígito.
 
-*f_beta:*
+#### *f_beta:*
 
 
-_Codigo sin funcionar:_ 
-    Errores encontrados: 
-    - No se incluyeron los archivos de cabecera necesarios.
-    - En la línea 12, la implementación del scanf es incorrecta ya que falta el operador '&', que permite pasar la dirección de memoria de la variable para que la función pueda modificar su valor. 
-    - La función **duplicar_numero** no produce ningún cambio en la variable original, ya que trabaja con una corpia del valor. Para modificarla correctamente, es necesario trabajar con punteros. Para ello, pasamos como parámetro un puntero a entero y modificamos su contenido con el operador de indirección '*'.
-    - En la invocación de la función (línea 20), debemos pasar como argumento la dirección de memoria de la variable ya que estamos trabajando con punteros. 
+### _Codigo sin funcionar:_ 
+Errores encontrados: 
+- No se incluyeron los archivos de cabecera necesarios.
+- En la línea 12, la implementación del scanf es incorrecta ya que falta el operador '&', que permite pasar la dirección de memoria de la variable para que la función pueda modificar su valor. 
+- La función **duplicar_numero** no produce ningún cambio en la variable original, ya que trabaja con una corpia del valor. Para modificarla correctamente, es necesario trabajar con punteros. Para ello, pasamos como parámetro un puntero a entero y modificamos su contenido con el operador de indirección '*'.
+- En la invocación de la función (línea 20), debemos pasar como argumento la dirección de memoria de la variable ya que estamos trabajando con punteros. 
