@@ -1,13 +1,13 @@
 #include <stdio.h>
-
+//renombrar funciones y variables de forma adecuada
 void f_alpha(int *p) {
-    int temp = *p;
-    int rev = 0;
+    int temp = *p; //*p = 452
+    int rev = 0; //rev = 1 pero le asigna 0 (inicializar)
     while (temp > 0) {
-        rev = (rev * 10) + (temp % 10);
-        temp = temp / 10;
+        rev = (rev * 10) + (temp % 10); //0 + 2, 20+5(45%10), 250+4(4%10)
+        temp = temp / 10; //45 (quita el ultimo digito), 4, 0
     }
-    *p = rev;
+    *p = rev; //contenido de p = rev = 254
 }
 
 void f_beta(int *p) {
