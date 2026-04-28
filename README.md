@@ -22,19 +22,20 @@ El archivo se debe crear desde el inicio del proyecto, antes de hacer el primer 
 - rev = 0, inicializa la variable
 - mientras temp es mayor a 0
     * it 1: 
-     * rev = 0*10 + 2 = 2 (multiplica por 10 rev y le suma el último dígito de temp)
-     * temp = 45 (quita el último dígito de temp)
-it 2:
-rev = 2*10 + 5 = 25
-temp = 4
-it 3:
-rev = 25*10 + 4 = 254
-temp = 0
-se corta el bucle
-asigna 254 a la variable a la que apunta el puntero.
-        **conclusión:** f_alpha invierte el número recibido. temp es la variable auxiliar para recorrer el numero original. rev va construyendo el numero invertido dígito a dígito.
+        * rev = 0*10 + 2 = 2 (multiplica por 10 rev y le suma el último dígito de temp)
+        * temp = 45 (quita el último dígito de temp)
+    * it 2:
+        * rev = 2*10 + 5 = 25
+        * temp = 4
+    * it 3:
+        * rev = 25*10 + 4 = 254
+        * temp = 0
+    * se corta el bucle
+- asigna 254 a la variable a la que apunta el puntero.
+_Conclusión:_ 
+f_alpha invierte el número recibido. temp es la variable auxiliar para recorrer el numero original. rev va construyendo el numero invertido dígito a dígito.
 
-    ### f_beta:
+*f_beta:*
 
 
 _Codigo sin funcionar:_ 
